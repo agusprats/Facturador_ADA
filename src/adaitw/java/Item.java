@@ -6,6 +6,7 @@ public class Item {
     private Double precioUnitario;
     private int cantidad;
 
+    //Constructor
     public Item(int nro, String detalle, Double precioUnitario, int cantidad) {
         this.nro = nro;
         this.detalle = detalle;
@@ -45,6 +46,8 @@ public class Item {
         this.cantidad = cantidad;
     }
 
+    //Calculo subtotal No lleva setter porque lo calculo en el momento.
+    //No es un atributo de la clase
     public Double getSubtotal() {
         return cantidad*precioUnitario;
     }

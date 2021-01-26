@@ -6,17 +6,23 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+        //Emitir una factura
+        Factura f = new Factura();
+
         List<Factura> facturas = new ArrayList<>();
 
-        Factura f = new Factura();
-        f.setDescuento(0.05);//5% de descuento
+        // Agregar la factura a la lista:
+        facturas.add(f);
+
+        //5% de descuento
+        f.setDescuento(0.05);
+
         // agregar items a la factura:
+        // Creo un nuevo objeto i, y se lo paso al método.
         f.agregarItem(new Item(1,"tornillos",20.0,15));
         f.agregarItem(new Item(2,"tarugos",15.0,15));
         f.agregarItem(new Item(3,"destornillador",255.0,1));
         f.agregarItem(new Item(4,"martillo",360.50,1));
-        // agregar la factura a la lista:
-        facturas.add(f);
 
         // otra forma de crear una factura y agregarla a la lista:
         List<Item> itemsNuevos = new ArrayList<>();
